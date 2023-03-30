@@ -6,6 +6,28 @@ module.exports = function (api) {
       "@babel/plugin-proposal-export-namespace-from",
       "react-native-reanimated/plugin",
       require.resolve("expo-router/babel"),
+      ["module:react-native-dotenv", {
+        "moduleName": "@env",
+        "path": ".env",
+        "blacklist": null,
+        "whitelist": null,
+        "safe": true,
+        "allowUndefined": true
+      }]
     ],
   };
 };
+
+// module.exports = {
+//   "presets": ["module:metro-react-native-babel-preset"],
+//   "plugins": [
+//     ["module:react-native-dotenv", {
+//       "moduleName": "@env",
+//       "path": ".env",
+//       "blacklist": null,
+//       "whitelist": null,
+//       "safe": true,
+//       "allowUndefined": true
+//     }]
+//   ]
+// };
